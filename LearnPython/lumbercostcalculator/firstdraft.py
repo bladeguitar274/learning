@@ -25,7 +25,7 @@ Costs
 End goal
 take inputs
 calulate out totals per store and print total pricing per store
-maybe breakout per item but meh
+Create web scraper to pull item prices automatically
 '''
 
 
@@ -37,18 +37,18 @@ mdf_amount = int(input('How many full sheets of 1/2" MDF do you need? '))
 #dict
 Costs = {
     'h' : {
-        'tbf':7.50,
-        'ply':50,
+        'tbf':4.25,
+        'ply':20,
         'mdf':48
     },
     'l' : {
-        'tbf':7.50,
-        'ply':60,
+        'tbf':4.25,
+        'ply':20,
         'mdf':50
     },
     'm' : {
-        'tbf':8,
-        'ply':44,
+        'tbf':4.52,
+        'ply':20,
         'mdf':48
     }
 }
@@ -62,8 +62,5 @@ Costsm = (
     (Costs['m']['tbf'] * tbf_amount) + (Costs['m']['ply'] * ply_amount) + (Costs['m']['mdf'] * mdf_amount)
 )
 print('Total at Home Depot $' + str(Costsh))
-#print(Costs['h']['tbf'] * tbf_amount)
-#print(Costs['h']['ply'] * ply_amount)
-#print(Costs['h']['mdf'] * mdf_amount)
 print('Total at Lowes $' + str(Costsl)) 
 print('Total at Menards $' + str(Costsm))
